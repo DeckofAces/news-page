@@ -5,7 +5,7 @@ export default function Header() {
 	return (
 		<>
 			<header className='flex items-center justify-between'>
-				<Image className='w-12' src='/images/logo.svg' alt='News Logo' width={65} height={40} priority />
+				<Image className='w-12 md:w-14' src='/images/logo.svg' alt='News Logo' width={100} height={100} priority />
 				<Navigation />
 			</header>
 		</>

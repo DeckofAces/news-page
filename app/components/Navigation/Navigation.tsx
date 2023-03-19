@@ -15,7 +15,9 @@ const nav_list = [
 function NavItem({ href, text }: { href: string; text: string }) {
 	return (
 		<li>
-			<Link href={href}>{text}</Link>
+			<Link className='hover:text-soft-orange' href={href}>
+				{text}
+			</Link>
 		</li>
 	);
 }

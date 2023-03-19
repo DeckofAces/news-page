@@ -6,7 +6,7 @@ function Category({ image, count, title, text }: { image: string; count: number;
 			<Image className='w-1/3 max-w-[6.5rem]' alt='cover' src={image} width={200} height={50} />
 			<div className='h-full space-y-2'>
 				<h1 className='text-4xl font-bold tracking-wider text-greyish-blue'>0{count}</h1>
-				<h2 className='text-lg font-extrabold text-very-dark-blue'>{title}</h2>
+				<h2 className='cursor-pointer text-lg font-extrabold text-very-dark-blue hover:text-soft-orange'>{title}</h2>
 				<p className='text-dark-greyish-blue'>{text}</p>
 			</div>
 		</section>
@@ -22,7 +22,7 @@ export default function Categories() {
 
 	return (
 		<section>
-			<div className='space-y-8'>
+			<div className='flex flex-col gap-8 md:flex-row'>
 				{categories.map((category) => (
 					<Category key={category.id} image={category.image} count={category.id} title={category.title} text={category.text} />
 				))}

@@ -1,7 +1,7 @@
 function Content({ header, text }: { header: string; text: string }) {
 	return (
-		<div className='border-b border-greyish-blue py-8 last:border-0 last:pb-0'>
-			<h1 className='text-xl font-bold text-off-white'>{header}</h1>
+		<div className='border-b border-greyish-blue py-8 last:border-0 last:pb-0 md:py-10'>
+			<h1 className='cursor-pointer text-xl font-bold text-off-white hover:text-soft-orange'>{header}</h1>
 			<p className='text-greyish-blue'>{text}</p>
 		</div>
 	);
@@ -15,7 +15,7 @@ export default function NewContent() {
 	];
 
 	return (
-		<section className='bg-very-dark-blue px-6 py-6'>
+		<section className='h-full bg-very-dark-blue px-6 py-6'>
 			<h1 className='text-4xl font-bold text-soft-orange'>New</h1>
 			{articles.map((article) => (
 				<Content key={article.header} header={article.header} text={article.text} />
